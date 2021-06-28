@@ -1,0 +1,5 @@
+<div *ngIf="jobs$ | async as jobs">
+  <div *ngFor="let job of jobs">
+    {{job.description}}
+  </div>
+</div>
