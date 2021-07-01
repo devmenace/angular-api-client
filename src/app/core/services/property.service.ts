@@ -13,6 +13,6 @@ export class PropertyService {
   ) { }
 
   public get$(): Observable<any> {
-    return this.httpClient.get(environment.apiUrl + 'properties')
+    return this.httpClient.get(environment.apiUrl + 'jobs')
   }
 }

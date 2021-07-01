@@ -8,7 +8,7 @@
   <label for="status">Status: </label>
   <input id="status" type="text" formControlName="status">
 
-  <select formControlName="state" *ngIf="properties$ | async as properties">
+  <select formControlName="status" *ngIf="properties$ | async as properties">
     <option *ngFor="let prorerty of properties" [ngValue]="prorerty.id">
       {{ prorerty.name }}
     </option>

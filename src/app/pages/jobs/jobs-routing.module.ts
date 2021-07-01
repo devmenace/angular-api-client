@@ -11,6 +11,10 @@ const routes: Routes = [
   {
     path: 'create',
     component: JobCreateComponent
+  },
+  {
+    path: 'update',
+    component: JobCreateComponent
   }
 ];
 
