@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'https://jobsapi.local/api/'
+  apiUrl: 'https://japi.local/api/'
 }
 
 /*
