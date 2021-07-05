@@ -9,8 +9,8 @@
   <input id="status" type="text" formControlName="status">
 
   <select formControlName="status" *ngIf="properties$ | async as properties">
-    <option *ngFor="let prorerty of properties" [ngValue]="prorerty.id">
-      {{ prorerty.name }}
+    <option *ngFor="let property of properties" [ngValue]="property.id">
+      {{ property.name }}
     </option>
   </select>
   <p>Complete the form to enable button.</p>

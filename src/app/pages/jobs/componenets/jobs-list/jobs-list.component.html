@@ -1,5 +1,7 @@
 <div *ngIf="jobs$ | async as jobs">
   <div *ngFor="let job of jobs">
+  <br>
     {{job.description}}
+  <hr>
   </div>
 </div>

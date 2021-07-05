@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import {JobsListComponent} from "./componenets/jobs-list/jobs-list.component";
 import {JobCreateComponent} from "./componenets/job-create/job-create.component";
+import {JobUpdateComponent} from "./componenets/job-update/job-update.component";
 
 const routes: Routes = [
   {
@@ -14,7 +15,7 @@ const routes: Routes = [
   },
   {
     path: 'update',
-    component: JobCreateComponent
+    component: JobUpdateComponent
   }
 ];
 
@@ -22,4 +23,5 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
+
 export class JobsRoutingModule { }
