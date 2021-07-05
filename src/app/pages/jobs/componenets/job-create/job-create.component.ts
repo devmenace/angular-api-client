@@ -5,7 +5,7 @@ import {JobsService} from "../../../../core/services/jobs.service";
 import {Observable, Subscription} from "rxjs";
 import {Router} from "@angular/router";
 import {PropertyService} from "../../../../core/services/property.service";
-import {Propertie} from "../../../../core/models/propertie";
+import {Property} from "../../../../core/models/property";
 
 @Component({
   selector: 'app-job-create',
@@ -14,7 +14,7 @@ import {Propertie} from "../../../../core/models/propertie";
 })
 export class JobCreateComponent implements OnInit, OnDestroy {
   private subscription = new Subscription();
-  public properties$: Observable<Propertie[]> = this.propertieService.get$();
+  public properties$: Observable<Property[]> = this.propertyService.get$();
   jobForm: FormGroup = new FormGroup({
     ['summary']: new FormControl(''),
     ['description']: new FormControl(''),
@@ -24,7 +24,7 @@ export class JobCreateComponent implements OnInit, OnDestroy {
 
   constructor(
     private jobsService: JobsService,
-    private propertieService: PropertyService,
+    private propertyService: PropertyService,
     private router: Router
   ) { }
 
@@ -36,7 +36,7 @@ export class JobCreateComponent implements OnInit, OnDestroy {
       this.jobsService.create$(this.jobForm.value)
         .subscribe(
           value => {
-            this.router.navigate(['/']).catch(e => console.error('router navigation error: ', e));
+            this.router.navigate(['/jobs']).catch(e => console.error('router navigation error: ', e));
           },
           error => {
             console.error('Job creation failed: ', error);

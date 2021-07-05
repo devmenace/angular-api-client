@@ -1,4 +1,4 @@
-export interface Propertie {
+export interface Property {
   id: number;
   name: string;
 }

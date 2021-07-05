@@ -1,18 +1,20 @@
 <form [formGroup]="jobForm" (ngSubmit)="onSubmit()">
   <label for="summary">Summary: </label>
   <input id="summary" type="text" formControlName="summary">
-
+  <br>
   <label for="description">Description: </label>
   <input id="description" type="text" formControlName="description">
-
+  <br>
   <label for="status">Status: </label>
   <input id="status" type="text" formControlName="status">
-
+  <br>
+  <label for="status">Property: </label>
   <select formControlName="status" *ngIf="properties$ | async as properties">
     <option *ngFor="let property of properties" [ngValue]="property.id">
-      {{ property.name }}
+      {{ property.id }}
     </option>
   </select>
+  <br>
   <p>Complete the form to enable button.</p>
   <button type="submit" [disabled]="!jobForm.valid">Submit</button>
 </form>
